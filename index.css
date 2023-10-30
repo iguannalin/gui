@@ -1,0 +1,37 @@
+/* @import url(small.css) (min-width:0px);
+@import url(large.css) (min-width:900px); */
+
+:root {
+  --main-bg-color: rgb(35, 35, 35);
+  --main-text-color: #f9faffde;
+  --shadow-color: #858ebc;
+}
+
+html {
+  display: block;
+}
+
+body {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  background-color: var(--main-bg-color);
+  color: var(--main-text-color);
+  text-shadow: var(--shadow-color) -2px 2px 8px;
+}
+
+svg {
+  width: 100vw;
+  height: 100vh;
+  position: absolute;
+  filter: blur(140px);
+  top: 0;
+  left: 0;
+}
+
+#container {
+  width: 100vw;
+  height: 100vh;
+}
