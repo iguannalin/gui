@@ -12,6 +12,8 @@ window.addEventListener("load", () => {
     for (let j = 0; j < 5; j++) {
       const td = document.createElement("td");
       td.innerText = ghosts[(5*i)+j];
+      td.addEventListener("touchmove", (e) => {e.preventDefault(); e.target.classList.add("appear")});
+      td.addEventListener("touchend", (e) => {e.preventDefault(); e.target.classList.remove("appear")});
       tr.appendChild(td);
     }
     container.appendChild(tr);
