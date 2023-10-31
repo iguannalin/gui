@@ -9,11 +9,13 @@
 
 html {
   display: block;
+  width: 100%;
 }
 
 body {
-  margin: 0 auto;
   display: flex;
+  width: 100vw;
+  height: 100vh;
   justify-content: center;
   align-items: center;
   flex-flow: column;
@@ -22,16 +24,26 @@ body {
   text-shadow: var(--shadow-color) -2px 2px 8px;
 }
 
-svg {
-  width: 100vw;
-  height: 100vh;
-  position: absolute;
-  filter: blur(140px);
-  top: 0;
-  left: 0;
+p {
+  line-height: 0px;
+  padding: 0;
+  margin: 2px;
 }
 
-#container {
-  width: 100vw;
-  height: 100vh;
+.appear {
+  transition: all 0.05s ease-in-out;
+  -webkit-animation: fade 2s;
+  animation: fade 2s;
+}
+
+@keyframes fade {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
 }
